@@ -1,0 +1,38 @@
+{
+  "name": "server_nntm",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon --inspect src/app.js",
+    "test": "echo \"Error: no test specifieds\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vudqph11527/nongnghiepthongminh"
+  },
+  "keywords": [
+    "nntm"
+  ],
+  "author": "vudq",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vudqph11527/nongnghiepthongminhissues"
+  },
+  "homepage": "https://github.com/vudqph11527/nongnghiepthongminh#readme",
+  "dependencies": {
+    "@hapi/joi": "^17.1.1",
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "express-handlebars": "^5.3.4",
+    "jsonwebtoken": "^8.5.1",
+    "mysql2": "^2.3.2",
+    "router": "^1.3.5"
+  },
+  "devDependencies": {
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.13"
+  }
+}
