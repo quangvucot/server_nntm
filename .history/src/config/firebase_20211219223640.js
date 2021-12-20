@@ -2,13 +2,12 @@ const admin = require("firebase-admin");
 const serviceAccount = require("./fir-notification-554d4-firebase-adminsdk-8sc3v-1faaaa5c22.json");
 
 const connectionFire = (body, title) => {
-  if (!admin.apps.length) {
-    admin.initializeApp({
-      credential: admin.credential.cert(serviceAccount),
-    });
-  }
+  admin.initializeApp({
+    credential: admin.credential.cert(serviceAccount),
+  });
   const token =
-    "fkWUoMkySV-Gxa1s-1_8bM:APA91bEVteSSMRiaCJkifDOehhRU89WeHMYvAuxhoutmnvCDWw45-3_QX-zNlQobG4uFSGqyaEu08SAMKVLA6969Yv8Cg0bKkoTanHOKy6EP6v7Vra8vlt_NXREUcOPg-LZnwwMtaH6m";
+    "f5Ud-UNxQE6iUmHLtrSyDJ:APA91bEIOaa3C0rIAlOl-ejAlRysTazJupAIQP9FHcwAUMUIzzYdvaIAEfMISD0RPNP03PM9CoEVKt2jRAEtOlTp0Nuapmx4TAShBVsXX2jE3veZqWH7X_YYT8O8yDgzffOK_R4N6Hzd";
+
   admin
     .messaging()
     .send({

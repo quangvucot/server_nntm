@@ -39,7 +39,7 @@ module.exports = {
   // Lấy dữ liệu sensor thông qua ID Thiết bị
   getDataSensorById: (deviceID, callback) => {
     db.query(
-      `SELECT devices.deviceID, devices.temperature, devices.humidity, devices.soilHumidity, devices.soilPH, devices.lightIntensity FROM devices INNER JOIN farms ON farms.deviceID = ? ORDER BY deviceID DESC limit 1`,
+      `SELECT devices.deviceID, devices.temperature, devices.humidity, devices.soilHumidity, devices.soilPH, devices.lightIntensity FROM devices INNER JOIN farms ON farms.deviceID = ? ORDER BY deviceID DESC limit 1 `,
       [deviceID],
       (err, results, fields) => {
         if (err) {

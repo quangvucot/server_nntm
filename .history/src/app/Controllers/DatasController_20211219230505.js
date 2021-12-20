@@ -1,4 +1,3 @@
-const connectionFire = require("../../config/firebase");
 const {
   createDataSensor,
   getDataSensorById,
@@ -46,9 +45,8 @@ class DatasController {
           console.log(err);
           return res.status(500).send({ success: 0, message: err.message });
         }
-        if (req.query.temperature > 30 && req.query.temperature < 40) {
-          connectionFire("Nhiệt độ quá cao", "Cảnh Báo");
-          console.log("Check", "Check");
+        if (req.query.temperature > 30 && req.query.temperature > 40) {
+          connectionFire("Độ ẩm quá cao", "Cảnh Báo");
         }
         return res.status(200).json({ success: 1, data: results.farmName });
       });
